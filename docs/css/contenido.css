@@ -1,7 +1,7 @@
 /* Estilos generales de la página */
 body {
     font-family: 'Dancing Script', cursive;
-    background: black;
+    background: rgb(255, 255, 255);
     /*background: linear-gradient(135deg, #000000, #1c1c1c, #0a0a0a); /* Degradado inicial en tonos oscuros */
     /*background-size: 200% 200%; 
     animation: cambiarFondo 5s ease infinite;*/
@@ -42,12 +42,12 @@ body {
 }
 h1 {
     font-family: 'Dancing Script', cursive;
-    color: white;
+    color: rgb(255, 0, 0);
     font-size: 2.5em;
 }
 h2{
     font-size: 2.5em;
-    color:   gold;
+    color:   rgb(255, 0, 0);
 }
 
 
@@ -463,7 +463,7 @@ html, body {
 
 /* Sección con imagen de fondo y parallax */
 .section1 {
-    background-image: url('../Img/fondo_graduacion.jpg');
+    background-image: url('../Img/Fondo2.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -489,7 +489,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
+    background-color: rgba(0, 0, 0, 0); /* Oscurece el fondo */
     z-index: 1;
 }
 
@@ -544,12 +544,12 @@ html, body {
 hr {
     border: none; /* Elimina el borde predeterminado */
     height: 5px; /* Define el grosor de la línea */
-    background-color: #f1f7e8fa; /* Cambia el color de la línea */
+    background-color: #ff0000fa; /* Cambia el color de la línea */
     width: 80%; /* Ajusta el ancho de la línea al 80% */
     margin: 20px auto; /* Centra la línea y añade un margen superior e inferior */
     box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
     border-radius: 5px; /* Redondea los bordes de la línea */
-    box-shadow: 0 4px 10px rgba(202, 235, 16, 0.7); /* Añade una sombra más prominente */
+    box-shadow: 0 4px 10px rgba(109, 0, 0, 0.7); /* Añade una sombra más prominente */
 }
 
 .img-responsive {
