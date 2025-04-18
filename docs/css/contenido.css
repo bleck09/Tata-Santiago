@@ -1008,7 +1008,7 @@ hr {
     text-align: center;
     padding: 10px 0;
     margin: 0 auto;
-    box-shadow: 0 5px 10px rgba(243, 242, 242, 0.986);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.986);
   }
   
   /* Mes */
@@ -1067,7 +1067,7 @@ hr {
     position: absolute;
     margin: 10px;
     z-index: 2;
-    background: rgba(255, 219, 219, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(24px);
     border-radius: 10px;
     overflow: hidden;
@@ -1101,7 +1101,9 @@ hr {
     75% { transform: translate(-100%, -100%) translate3d(0, 100%, 0); }
     100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
   }
+
  /* 📱 Celulares */
+ 
 @media (max-width: 599px) {
   .cardBlanco {
     width: 160px;

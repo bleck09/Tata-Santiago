@@ -1,5 +1,5 @@
 
-const graduationDate = new Date("April 5, 2025 18:00:00").getTime();
+const graduationDate = new Date("July 26, 2025 18:00:00").getTime();
 
 const countdownInterval = setInterval(() => {
   const now = new Date().getTime();
