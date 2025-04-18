@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franz Chambi Mamani</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EC5qXZ2IsEj/J5K4edfpBSR9Yh1KfbzBb82PpMWFZpgdRVH+zLsi7BzZlXDb6dfT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/contenido.css">
+
+
+</head>
+
+<body>
+    <!-- Elemento de audio oculto -->
+    <audio id="background-music" loop>
+        <source src="../music/SaraViolin.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        // Función para reproducir o pausar la música dependiendo de la visibilidad de la página
+        function handleVisibilityChange() {
+            var audio = document.getElementById('background-music');
+
+            if (document.hidden) {
+                audio.pause(); // Pausa la música si la página no está visible
+            } else {
+                audio.play(); // Reanuda la música si la página está visible
+            }
+        }
+
+        // Al cargar la página, reproduce la música
+        window.addEventListener('load', function () {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        });
+
+        // Escucha el evento de cambio de visibilidad
+        document.addEventListener('visibilitychange', handleVisibilityChange, false);
+    </script>
+    <section class="section1">
+        <div class="container text-center mt-5"> 
+            <img src="../Img/llegada.png" alt="Imagen con latido" style="width: 200px; height: auto;">
+            
+            <p class="text-center">Que la sabiduría y el esfuerzo iluminen el sendero hacia un futuro lleno de éxitos.
+                Que cada desafío se transforme en una lección y cada meta alcanzada sea un triunfo personal.</p>
+            <p class="text-center">Con la bendicion de Dios y mis padres</p>
+            <h2 class="display-4 text-primary">Francisco Chambi Correa </h2>
+            <h2 class="display-4 text-primary">y </h2>
+            <h2 class="display-4 text-primary">Agustina Mamani Inca </h2>
+            <h1 class="countdown-event">Te invitamos a celebrar</h1>
+        </div>
+        
+    </section>
+    <h1 class="Titulo21">Mi Graduación</h1>
+    <section class="section1">
+        <div class="container text-center mt-5">
+          <!-- Imagen con sombra y lo que ya tenías -->
+          <img
+            src="../Img/Franz.JPG"
+            alt="Imagen con latido"
+            style="width: 200px; height: auto; box-shadow: 4px 6px 10px rgba(255, 255, 255, 0.8); margin-top: 50px;"
+          />
+          <h2 class="display-4 text-primary">Franz Raymis Chambi Mamani</h2>
+          <p class="year"><b></B>EL DIA SABADO, 05 DE ABRIL DEL 2025</b></p>
+          
+      
+          <!-- Aquí comienza el estilo tipo calendario -->
+          <div class="calendar-card mx-auto my-4">
+            <h2 class="month">ABRIL</h2>
+            <h1 class="date">05</h1>
+            <p class="weekday">SÁBADO</p>
+          </div>
+          <p class="lead">“Con sincera emoción, les invito cordialmente a celebrar mi graduación.”</p>
+          
+        </div>
+      </section>
+    <hr>
+    <h2 class="display-4 text-primary">Cuenta Regresiva</h2>
+    <hr>
+    <section class="section3 d-flex text-center">
+        <div class="section3-content">
+            <h1 class="countdown-title">Faltan</h1>
+            <div class="countdown-numbers">
+                <span id="days">0</span>
+                <span>:</span>
+                <span id="hours">0</span>
+                <span>:</span>
+                <span id="minutes">0</span>
+                <span>:</span>
+                <span id="seconds">0</span>
+            </div>
+            <p class="countdown-label">Días &nbsp;&nbsp; Horas &nbsp;&nbsp; Minutos &nbsp;&nbsp; Segundos</p>
+            <h2 class="countdown-event">para mi Graduación</h2>
+        </div>
+    </section>
+
+    <section>
+        <hr>
+        <div class="container text-center mt-5">
+            <h2 class="display-4 text-primary"> Gran Celebración </h2>
+        </div>
+        <hr>
+        <h1 class="countdown-title">Salón de Eventos "El Trovador"</h1>
+        <p class="text-center">
+            ¡Todos están invitados! Ven a festejar el logro del graduado.
+        </p>
+        
+    </section>  
+    <section>
+        <div class="cardAnahi">
+            <img src="../Img/Evento.jpeg" alt="Lugar del evento" class="img-fluid uni-img"
+                style="max-width: 600px; width: 100%; height: auto;">
+            <img src="../Img/Evento2.jpeg" alt="Lugar del evento" class="img-fluid uni-img"
+                style="max-width: 600px; width: 100%; height: auto;">
+            <img src="../Img/Evento3.jpeg" alt="Lugar del evento" class="img-fluid uni-img"
+                style="max-width: 600px; width: 100%; height: auto;">
+
+    </section>
+    <hr>
+    <h2 class="display-4 text-primary">Ubicación del Evento</h2>
+    <hr>
+    <section class="section4 d-flex text-center">
+        <div class="section4-content">
+            <br><br><br><br>
+            <h1 class="countdown-title">Lugar de la fiesta</h1>
+            <p class="cardAnDescrip">Esquina Beni y Primero de Mayo</p>
+            <a href="https://maps.app.goo.gl/3WWQS5MTiHXdGPtQ7" target="_blank">
+                <img src="../Img/ubicacion.png" alt="Lugar del evento" class="img-fluid ubicacion-img">
+              </a>
+            <br>
+            <button onclick="window.open('https://maps.app.goo.gl/3WWQS5MTiHXdGPtQ7', '_blank');"
+                class="btn btn-primary mt-3">
+                Abrir Ubicación
+                <div class="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </button>
+            <p class="cardAnDescrip"><strong>Nota:</strong>  El salón se encuentra a dos cuadras de la plaza principal de Quillacollo.
+                Para ingresar, dirígete a la esquina de <strong>Calle Beni</strong> y <strong>Primero de Mayo</strong>, y continúa por
+                el pasaje hacia el norte. Verás la entrada del salón unos metros adentro del callejón.
+              </p>
+            <br><br><br><br>
+        </div>
+    </section>
+    <section>
+        <hr>
+        <div class="container text-center mt-5">
+            <h2 class="display-4 text-primary">Programa del Gran Día </h2>
+        </div>
+        <hr>
+        <div class="cardAnahi">
+
+            <div class="cardAn">
+                <h2 class="cardAnTitulo">Llegada del Graduado</h2>
+                <img src="../Img/llegada.png" alt="">
+                <p> 17:00 - 18:00 </p>
+                <p class="cardAnDescrip">El graduado llega a la casa donde se celebra la fiesta.✨</p>
+            </div>
+
+            <div class="cardAn">
+                <h2 class="cardAnTitulo">Banquete</h2>
+                <img src="../Img/banquete.png" alt="">
+                <p> 18:00 - 19:00 </p>
+                <p class="cardAnDescrip"> Comer juntos hace este dia especial✨</p>
+            </div>
+
+            <div class="cardAn">
+                <h2 class="cardAnTitulo">Corte de Torta</h2>
+                <img src="../Img/Torta.png" alt="">
+                <p> 19:00 - 20:00 </p>
+                <p class="cardAnDescrip">Que cada pedazo sea felicidad compartida 😊</p>
+            </div>
+            
+            <div class="cardAn">
+                <h2 class="cardAnTitulo">Fiesta</h2>
+                <img src="../Img/fiesta.png" alt="">
+                <i class="fas fa-graduation-cap"></i>
+                <p> 20:30 </p>
+                <p class="cardAnDescrip">Brindemos: el fin de un capítulo y el comienzo de un gran futuro.</p>
+            </div>
+    </section>
+
+    
+    <hr>
+    <h2 class="display-4 text-primary">🎓 Ingeniería Civil 🎓</h2>
+    <hr>
+    <h1 class="countdown-title">¡Gracias por compartir este momento tan especial!</h1>
+    <section class="section">
+        <!-- Galería 3D --><h2 class="display-4 text-primary">  </h2>
+        <div class="gallery3d">
+            <div class="box">
+                <span class="gallery_corazon">🎓</span>
+
+                <span style="--i:1;"><img src="../Img/Franz1.JPG" alt="Imagen 1"></span>
+                <span style="--i:2;"><img src="../Img/Franz2.JPG" alt="Imagen 2"></span>
+                <span style="--i:3;"><img src="../Img/Franz3.JPG" alt="Imagen 3"></span>
+                <span style="--i:4;"><img src="../Img/Franz4.JPG" alt="Imagen 4"></span>
+                <span style="--i:5;"><img src="../Img/Franz5.JPG" alt="Imagen 5"></span>
+                <span style="--i:6;"><img src="../Img/Franz6.JPG" alt="Imagen 6"></span>
+                <span style="--i:7;"><img src="../Img/Franz7.JPG" alt="Imagen 6"></span>
+                <span style="--i:8;"><img src="../Img/Franz8.JPG" alt="Imagen 6"></span>
+            </div>
+        </div>
+    </section>
+    
+    <hr>
+
+    <script src="../js/cuentaRegresiva.js"></script>
+</body>
+
+</html>

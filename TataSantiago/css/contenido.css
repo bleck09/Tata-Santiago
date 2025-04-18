@@ -1,0 +1,1049 @@
+/* Estilos generales de la página */
+body {
+    font-family: 'Dancing Script', cursive;
+    background: black;
+    /*background: linear-gradient(135deg, #000000, #1c1c1c, #0a0a0a); /* Degradado inicial en tonos oscuros */
+    /*background-size: 200% 200%; 
+    animation: cambiarFondo 5s ease infinite;*/
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+}
+
+/* Animación para cambiar los colores del fondo */
+@keyframes cambiarFondo {
+    0% {
+        background-position: 0% 50%;
+        background-color: #000000; 
+    }
+    25% {
+        background-position: 50% 50%;
+        background-color: #1c1c1c; 
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #2e2e2e; 
+    }
+    75% {
+        background-position: 50% 50%;
+        background-color: #0a0a0a; 
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #000000; 
+    }
+}
+.Titulo21{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 5.5em;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 2.5em;
+}
+h2{
+    font-size: 2.5em;
+    color:   gold;
+}
+
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color:   #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0c0c0c33;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+}
+
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+.containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Encapsulando la galería en una clase `.gallery3d` para evitar que se modifiquen otros estilos */
+
+.gallery3d {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: 100vh;       
+}
+.gallery_corazon{
+    font-size: 30vh;
+}
+
+.gallery3d .box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.gallery3d .box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.gallery3d .box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sombra para las imágenes */
+.gallery3d .box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+
+.img-responsive {
+    max-width: 100%; 
+    height: auto;     
+    margin-top: 20px; 
+}
+
+
+
+/* From Uiverse.io by bhaveshxrawat */
+.cardAnahi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+.cardAn {
+    width: 190px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(194, 108, 158, 0.4); /* Sombra alrededor de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+
+.cardAn:hover {
+    transform: translateY(-10px); /* Efecto al pasar el ratón */
+    box-shadow: 0 12px 24px rgba(189, 182, 182, 0.6); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.cardAnTitulo {
+    z-index: 1;
+    color: white;
+    font-size: 2.6em;
+    margin-bottom: 15px;
+}
+
+.cardAnDescrip {
+    z-index: 1;
+    font-size: 1em;
+}
+
+.cardAn::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cardAn::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+  
+
+
+
+button {
+    position: relative;
+    padding: 12px 35px;
+    background: #fe9995;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid #fec195;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s ease;
+  }
+  
+  button:hover {
+    background: transparent;
+    color: #d4b9a6;
+    box-shadow: 0 0 25px #fec1958c;
+  }
+  
+  button:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .fil0 {
+    fill: #fffdef;
+  }
+  
+/* Eliminar márgenes y padding global */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Sección con imagen de fondo y parallax */
+.section1 {
+    background-image: url('../Img/fondo_graduacion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Altura mínima del viewport */
+    height: auto; /* Se adapta al contenido si es mayor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: visible; /* Permite que se muestre todo el contenido */
+    padding: 20px;
+    position: relative;
+}
+
+
+/* Capa oscura encima de la imagen */
+.section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+.section1 > * {
+    position: relative;
+    z-index: 2;
+   
+}
+
+/* Efecto de transición suave para el contenido */
+.section1-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+}
+
+.section1.scrolled .section1-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+}
+
+/* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .section1 {
+        background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+    }
+    
+    .section1 > * {
+        padding: 10px; /* Reduce los paddings en móviles */
+    }
+
+   
+    
+    .section1-content {
+        padding: 20px 10px;
+        transform: translateY(-20px); /* Ajuste menor para la transición */
+    }
+}
+
+/* Ajuste para pantallas más pequeñas como teléfonos */
+@media (max-width: 480px) {
+    .section1 {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .section1-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }
+
+    
+}
+
+hr {
+    border: none; /* Elimina el borde predeterminado */
+    height: 5px; /* Define el grosor de la línea */
+    background-color: #f1f7e8fa; /* Cambia el color de la línea */
+    width: 80%; /* Ajusta el ancho de la línea al 80% */
+    margin: 20px auto; /* Centra la línea y añade un margen superior e inferior */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+    border-radius: 5px; /* Redondea los bordes de la línea */
+    box-shadow: 0 4px 10px rgba(202, 235, 16, 0.7); /* Añade una sombra más prominente */
+}
+
+.img-responsive {
+    width: 200px; /* Tamaño inicial de la imagen */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el efecto */
+    animation: pulsar 2s infinite; /* Animación de pulsación */
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta un 20% */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
+
+/* Contenedor general de las tarjetas */
+.itinerary-cards {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si no caben */
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+  margin-top: 30px;
+}
+
+/* Estilo base de cada tarjeta */
+.itinerary-card {
+  background-color: #0e0e0e; /* Fondo oscuro (puedes cambiarlo) */
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover */
+.itinerary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Contenedor del ícono */
+.icon-container {
+  font-size: 2.5rem;
+  color: #fcd900; /* Color dorado para el ícono */
+  margin-bottom: 15px;
+}
+
+/* Título de la tarjeta */
+.itinerary-title {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* Tiempo del evento */
+.itinerary-time {
+  font-size: 1rem;
+  color: #d4d4d4;
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.itinerary-description {
+  font-size: 1rem;
+  color: #c0c0c0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .itinerary-card {
+    width: 200px;
+  }
+  .icon-container {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .itinerary-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .itinerary-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* =============================
+   Tarjetas (cardAn)
+============================= */
+
+/* Contenedor principal de las tarjetas (si lo usas) */
+.cardAnahi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  /* Tarjeta individual */
+  .cardAn {
+    width: 240px;            /* Ajusta el ancho de cada tarjeta */
+    min-height: 400px;       /* Altura mínima, crece si el contenido es mayor */
+    background: #07182E;     /* Color de fondo */
+    position: relative;      /* Para controlar z-index de pseudo-elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;  /* Contenido inicia en la parte superior */
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(194, 108, 158, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .cardAn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(5, 182, 226, 0.6);
+  }
+  
+  /* Pseudo-elementos de fondo */
+  .cardAn::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 160%;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+    z-index: 0; /* Al fondo */
+  }
+  
+  .cardAn::after {
+    content: '';
+    position: absolute;
+    background: #000000;
+    inset: 5px;              /* Equivale a top:5px; right:5px; bottom:5px; left:5px; */
+    border-radius: 15px;
+    z-index: 1;              /* Encima de ::before, debajo del contenido */
+  }
+  
+  /* Animación de rotación para ::before */
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Contenido al frente */
+  .cardAn * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Imagen de la tarjeta */
+  .cardAn img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* Título de la tarjeta */
+  .cardAnTitulo {
+    font-size: 2rem;  /* Ajusta el tamaño del título */
+    margin-bottom: 10px;
+  }
+  
+  /* Hora del evento, si deseas estilizarlo aparte */
+  .cardAnHorario {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Descripción de la tarjeta */
+  .cardAnDescrip {
+    font-size: 1.2rem;
+    line-height: 1.3; /* Aumenta la altura de línea si deseas */
+  }
+
+
+  /* Sección con imagen de fondo y parallax */
+.section3 {
+  background-image: url('../Img/fondo_graduacion.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen */
+.section3::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+.section3 > * {
+    position: relative;
+    z-index: 2;
+    transition: transform 1s ease;
+   
+}
+/* Título del contador */
+.countdown-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Números de cuenta regresiva */
+  .countdown-numbers {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Etiquetas */
+  .countdown-label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Texto final */
+  .countdown-event {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 20px;
+  }
+/* Efecto de transición suave para el contenido */
+.section3-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+}
+
+.section3.scrolled .section3-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+}
+
+/* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .section3 {
+        background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+    }
+    
+    .section3 > * {
+        padding: 10px; /* Reduce los paddings en móviles */
+    }
+
+   
+    
+    .section3-content {
+        padding: 20px 10px;
+        transform: translateY(-20px); /* Ajuste menor para la transición */
+    }
+}
+
+/* Ajuste para pantallas más pequeñas como teléfonos */
+@media (max-width: 480px) {
+    .section3 {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .section3-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }
+
+    
+}
+
+.uni-img {
+    max-width: 200px;  /* Ajusta este valor según lo que consideres adecuado */
+    width: 100%;
+    height: auto;
+    border-radius: 25px;       /* Esquinas redondeadas */
+    padding: 5px;              /* Espacio interno */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Sombra blanca */
+  }
+
+
+/* Estilos para la imagen de ubicación */
+.ubicacion-img {
+    max-width: 200px; /* O el tamaño que prefieras */
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    /* Animación de latido */
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  /* Keyframes para el efecto de latido */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Sección con imagen de fondo y parallax */
+  .section4 {
+    background-image: url('../Img/Evento3.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Capa oscura encima de la imagen */
+  .section4::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+  }
+  
+  /* Asegura que el contenido esté por encima de la capa oscura */
+  .section4 > * {
+      position: relative;
+      z-index: 2;
+      transition: transform 1s ease;
+     
+  }
+  /* Título del contador */
+  .countdown-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    
+    /* Números de cuenta regresiva */
+    .countdown-numbers {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+    
+    /* Etiquetas */
+    .countdown-label {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    
+    /* Texto final */
+    .countdown-event {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      color: #fff;
+      margin-top: 20px;
+    }
+  /* Efecto de transición suave para el contenido */
+  .section4-content {
+      transition: transform 1s ease; /* Transición suave al hacer scroll */
+  }
+  
+  .section4.scrolled .section4-content {
+      transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+  }
+  
+  /* --- Ajustes para dispositivos móviles --- */
+  @media (max-width: 768px) {
+      .section4 {
+          background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+          height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+      }
+      
+      .section4 > * {
+          padding: 10px; /* Reduce los paddings en móviles */
+      }
+  
+     
+      
+      .section4-content {
+          padding: 20px 10px;
+          transform: translateY(-20px); /* Ajuste menor para la transición */
+      }
+  }
+  
+  /* Ajuste para pantallas más pequeñas como teléfonos */
+  @media (max-width: 480px) {
+      .section4 {
+          height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+      }
+      
+      .section4-content {
+          transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+      }
+  
+      
+  }
+
+/* Tarjeta de calendario */
+.calendar-card {
+    background: #ffffff;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(243, 242, 242, 0.986);
+  }
+  
+  /* Mes */
+  .calendar-card .month {
+    background: #1e90ff;
+    color: #fff;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 0 0 8px 8px;
+    font-size: 1.2rem;
+  }
+  
+  /* Día (Número) con animación de latido */
+  .calendar-card .date {
+    font-size: 3rem;
+    margin: 10px 0 5px;
+    color: #020202;
+    font-weight: bold;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  /* Día de la semana */
+  .calendar-card .weekday {
+    font-size: 1rem;
+    color: #383838;
+    margin: 0;
+  }
+  
+  /* Keyframes para la animación de latido */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
