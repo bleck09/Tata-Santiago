@@ -3,7 +3,7 @@
 =================================== */
 body {
     font-family: 'Raleway', sans-serif;
-    background: #c7a902; /* Color dorado */
+    background: #0f0d00; /* Color dorado */
 
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
@@ -31,6 +31,7 @@ body {
     position: relative;
     animation: moveBackground 5s ease-in-out infinite alternate; /* Animación de movimiento */
     background-image: url('../Img/FondoPrincipal.jpeg');
+    border-radius: 20px;
   }
   
   /* Capa oscura encima de la imagen */
@@ -73,21 +74,23 @@ body {
     }
   }
   
-  /* --- Ajustes para dispositivos móviles --- */
-  @media (max-width: 768px) {
-    .section1 {
-        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
-    }
-    
-    .section1 > * {
-        padding: 10px; /* Reduce los paddings en móviles */
-    }
-    
-    .section1-content {
-        padding: 20px 10px;
-        transform: translateY(-20px); /* Ajuste menor para la transición */
-    }
+ /* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+  .section1 {
+    background-size: 100% 100%;
   }
+
+  .section1 > * {
+    padding: 10px;
+  }
+
+  .section1-content {
+    padding: 20px 10px;
+    animation: slideDown 1s ease-out forwards;
+  }
+}
+
+
   
   /* Ajuste para pantallas más pequeñas como teléfonos */
   @media (max-width: 480px) {
