@@ -1047,3 +1047,104 @@ hr {
     }
   }
 
+
+  .cardBlanco {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .bg {
+    position: absolute;
+    margin: 10px;
+    z-index: 2;
+    background: rgba(255, 219, 219, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+  }
+  
+  /* 👇 Blob sigue igual */
+  .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+  }
+  
+  @keyframes blob-bounce {
+    0% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+    25% { transform: translate(-100%, -100%) translate3d(100%, 0, 0); }
+    50% { transform: translate(-100%, -100%) translate3d(100%, 100%, 0); }
+    75% { transform: translate(-100%, -100%) translate3d(0, 100%, 0); }
+    100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+  }
+ /* 📱 Celulares */
+@media (max-width: 599px) {
+  .cardBlanco {
+    width: 160px;
+    height: 170px;
+  }
+
+  .bg h3 {
+    font-size: 14px;
+  }
+
+  .bg p {
+    font-size: 10px;
+  }
+}
+
+/* 📒 Tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .cardBlanco {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bg h3 {
+    font-size: 18px;
+  }
+
+  .bg p {
+    font-size: 14px;
+  }
+}
+
+/* 💻 Escritorio */
+@media (min-width: 1024px) {
+  .cardBlanco {
+    width: 260px;
+    height: 200px;
+  }
+
+  .bg h3 {
+    font-size: 20px;
+  }
+
+  .bg p {
+    font-size: 15px;
+  }
+}
