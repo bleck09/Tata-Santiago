@@ -1150,3 +1150,159 @@ hr {
     font-size: 15px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+ /* Sección con imagen de fondo y parallax */
+ .section2 {
+  background-image: url('../Img/Fondo2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen */
+.section2::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+.section2 > * {
+    position: relative;
+    z-index: 2;
+    transition: transform 1s ease;
+   
+}
+/* Efecto de transición suave para el contenido */
+.section2-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+}
+
+.section2.scrolled .section2-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+}
+
+/* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .section2 {
+        background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+        height: 70vh; /* La altura sigue siendo del 100% de la pantalla */
+    }
+    
+    .section2 > * {
+        padding: 10px; /* Reduce los paddings en móviles */
+    }
+
+   
+    
+    .section2-content {
+        padding: 20px 10px;
+        transform: translateY(-20px); /* Ajuste menor para la transición */
+    }
+}
+
+/* Ajuste para pantallas más pequeñas como teléfonos */
+@media (max-width: 480px) {
+    .section2 {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .section2-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }  
+}
+
+
+
+ /* Sección con imagen de fondo y parallax */
+ .section12 {
+  background-image: url('../Img/Fondo2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen */
+.section12::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+.section12 > * {
+    position: relative;
+    z-index: 2;
+    transition: transform 1s ease;
+   
+}
+/* Efecto de transición suave para el contenido */
+.section12-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+}
+
+.section12.scrolled .section12-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+}
+
+/* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .section12 {
+        background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+        height: 30vh; /* La altura sigue siendo del 100% de la pantalla */
+    }
+    
+    .section12 > * {
+        padding: 10px; /* Reduce los paddings en móviles */
+    }
+
+   
+    
+    .section12-content {
+        padding: 20px 10px;
+        transform: translateY(-20px); /* Ajuste menor para la transición */
+    }
+}
+
+/* Ajuste para pantallas más pequeñas como teléfonos */
+@media (max-width: 480px) {
+    .section12 {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .section12-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }  
+}
