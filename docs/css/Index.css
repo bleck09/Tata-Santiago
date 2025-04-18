@@ -3,7 +3,8 @@
 =================================== */
 body {
     font-family: 'Raleway', sans-serif;
-    background: black; /* Imagen de fondo */
+    background: #c7a902; /* Color dorado */
+
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -11,11 +12,12 @@ body {
     text-align: center;
     padding: 20px;
     margin: 0; /* Elimina los márgenes por defecto */
-    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    
+    
   }
   /* Sección con fondo animado */
   .section1 {
-    background-image: url('../Img/Fondo2.jpg'); /* Imagen de fondo */
+     /* Imagen de fondo */
     background-size: cover; /* Cubre toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* No repetir la imagen */
@@ -26,9 +28,9 @@ body {
     align-items: center;
     box-sizing: border-box;
     overflow: hidden;
-    padding: 20px;
     position: relative;
-    animation: moveBackground 10s ease-in-out infinite alternate; /* Animación de movimiento */
+    animation: moveBackground 5s ease-in-out infinite alternate; /* Animación de movimiento */
+    background-image: url('../Img/FondoPrincipal.jpeg');
   }
   
   /* Capa oscura encima de la imagen */
@@ -39,7 +41,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo ligeramente */
+    background-color: rgba(0, 0, 0, 0.1); /* Oscurece el fondo ligeramente */
     z-index: 1;
   }
   
