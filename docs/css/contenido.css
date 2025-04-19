@@ -1,7 +1,7 @@
 /* Estilos generales de la página */
 body {
     font-family: 'Dancing Script', cursive;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 210, 210);
     /*background: linear-gradient(135deg, #000000, #1c1c1c, #0a0a0a); /* Degradado inicial en tonos oscuros */
     /*background-size: 200% 200%; 
     animation: cambiarFondo 5s ease infinite;*/
@@ -1207,7 +1207,7 @@ hr {
 @media (max-width: 768px) {
     .section2 {
         background-attachment: fixed; /* Mantén el efecto parallax en móviles */
-        height: 80vh; /* La altura sigue siendo del 100% de la pantalla */
+        height: 90vh; /* La altura sigue siendo del 100% de la pantalla */
     }
     
     .section2 > * {
@@ -1315,18 +1315,21 @@ hr {
 
 
 
-.LibroCenter {
+.LibroCenter_propietario{
   display: flex;
   justify-content: center;
   align-items: center;
  
 }
-.book {
+.book_propietario {
   position: relative;
   border-radius: 10px;
   width: 220px;
   height: 300px;
-  background-color: whitesmoke;
+  background-image: url('../Img/MadreHija.jpg'); /* <- tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-box-shadow: 1px 1px 12px #ff0000;
   box-shadow: 1px 1px 12px #ff0000;
   -webkit-transform: preserve-3d;
@@ -1346,10 +1349,68 @@ hr {
   color: #000;
 }
 
-.cover {
+.cover_propietario {
   top: 0;
   position: absolute;
-  background-color: lightgray;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #ff0000;
+  box-shadow: 1px 1px 12px #ff0000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.LibroCenter_pasante{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.book_pasante {
+  position: relative;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-image: url('../Img/MadreHija.jpg'); /* <- tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: 1px 1px 12px #ff0000;
+  box-shadow: 1px 1px 12px #ff0000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+.cover_pasante {
+  top: 0;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -1372,7 +1433,8 @@ hr {
   justify-content: center;
 }
 
-.book.open .cover {
+.book_propietario.open .cover_propietario,
+.book_pasante.open .cover_pasante {
   transform: rotateY(-80deg);
   transition: all 0.5s;
 }

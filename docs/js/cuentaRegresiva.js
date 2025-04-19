@@ -26,49 +26,63 @@ const countdownInterval = setInterval(() => {
 
 
 
-const book = document.querySelector(".book");
+function setupBook(bookSelector, coverSelector) {
+  const book = document.querySelector(bookSelector);
+  const cover = document.querySelector(coverSelector);
+  if (!book || !cover) return;
 
-let openTimeout;
-let closeTimeout;
-let isUserInteracting = false;
+  let openTimeout;
+  let closeTimeout;
+  let isUserInteracting = false;
 
-function openBook(manual = false) {
-  book.classList.add("open");
-
-  if (manual) {
-    isUserInteracting = true;
-    clearTimeout(closeTimeout);
-    closeTimeout = setTimeout(() => {
-      book.classList.remove("open");
-      isUserInteracting = false;
-    }, 10000);
-  }
-}
-
-function closeBook() {
-  book.classList.remove("open");
-  isUserInteracting = false;
-}
-
-function toggleBook() {
-  if (book.classList.contains("open")) {
-    closeBook();
-  } else {
-    openBook(true); // Marca como interacción manual
-  }
-}
-
-book.addEventListener("click", toggleBook);
-
-// ⏱️ Si nadie toca nada, se abre a los 10 segundos
-openTimeout = setTimeout(() => {
-  if (!isUserInteracting) {
-    openBook(); // apertura automática sin marcar como manual
-    // ⏱️ Luego de abrirse automáticamente, cerrar en 10s si sigue sin interacción
-    closeTimeout = setTimeout(() => {
+  function setAutoOpenTimeout() {
+    clearTimeout(openTimeout);
+    openTimeout = setTimeout(() => {
       if (!isUserInteracting) {
-        closeBook();
+        openBook(false);
+        setAutoCloseTimeout();
       }
     }, 10000);
   }
-}, 10000);
+
+  function setAutoCloseTimeout() {
+    clearTimeout(closeTimeout);
+    closeTimeout = setTimeout(() => {
+      if (!isUserInteracting) {
+        closeBook();
+        setAutoOpenTimeout();
+      }
+    }, 10000);
+  }
+
+  function openBook(manual = false) {
+    book.classList.add("open");
+    if (manual) {
+      isUserInteracting = true;
+      setAutoCloseTimeout();
+    }
+  }
+
+  function closeBook() {
+    book.classList.remove("open");
+    isUserInteracting = false;
+    setAutoOpenTimeout();
+  }
+
+  function toggleBook() {
+    if (book.classList.contains("open")) {
+      closeBook();
+    } else {
+      openBook(true);
+    }
+  }
+
+  book.addEventListener("click", toggleBook);
+  setAutoOpenTimeout();
+}
+
+// 📘 Propietario
+setupBook(".book_propietario", ".cover_propietario");
+
+// 📕 Pasante
+setupBook(".book_pasante", ".cover_pasante");
