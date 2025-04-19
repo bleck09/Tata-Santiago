@@ -22,3 +22,53 @@ const countdownInterval = setInterval(() => {
     document.querySelector(".section3-content").innerHTML = "<h1>¡Es el día del acto!</h1>";
   }
 }, 1000);
+
+
+
+
+const book = document.querySelector(".book");
+
+let openTimeout;
+let closeTimeout;
+let isUserInteracting = false;
+
+function openBook(manual = false) {
+  book.classList.add("open");
+
+  if (manual) {
+    isUserInteracting = true;
+    clearTimeout(closeTimeout);
+    closeTimeout = setTimeout(() => {
+      book.classList.remove("open");
+      isUserInteracting = false;
+    }, 10000);
+  }
+}
+
+function closeBook() {
+  book.classList.remove("open");
+  isUserInteracting = false;
+}
+
+function toggleBook() {
+  if (book.classList.contains("open")) {
+    closeBook();
+  } else {
+    openBook(true); // Marca como interacción manual
+  }
+}
+
+book.addEventListener("click", toggleBook);
+
+// ⏱️ Si nadie toca nada, se abre a los 10 segundos
+openTimeout = setTimeout(() => {
+  if (!isUserInteracting) {
+    openBook(); // apertura automática sin marcar como manual
+    // ⏱️ Luego de abrirse automáticamente, cerrar en 10s si sigue sin interacción
+    closeTimeout = setTimeout(() => {
+      if (!isUserInteracting) {
+        closeBook();
+      }
+    }, 10000);
+  }
+}, 10000);
