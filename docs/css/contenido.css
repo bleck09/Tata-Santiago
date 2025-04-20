@@ -1438,3 +1438,51 @@ hr {
   transform: rotateY(-80deg);
   transition: all 0.5s;
 }
+
+
+
+
+/* Estilos por defecto (pantallas grandes) ya están definidos arriba */
+
+/* 📱 Ajustes para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .book_propietario,
+  .book_pasante {
+    width: 160px;
+    height: 240px;
+  }
+
+  .cover_propietario,
+  .cover_pasante {
+    font-size: 14px;
+  }
+
+  .cover_propietario h3,
+  .cover_pasante h3 {
+    font-size: 18px;
+  }
+
+  .cover_propietario p,
+  .cover_pasante p {
+    font-size: 14px;
+  }
+}
+
+/* 📱 Ajustes más pequeños (menos de 480px) */
+@media (max-width: 480px) {
+  .book_propietario,
+  .book_pasante {
+    width: 120px;
+    height: 190px;
+  }
+
+  .cover_propietario h3,
+  .cover_pasante h3 {
+    font-size: 16px;
+  }
+
+  .cover_propietario p,
+  .cover_pasante p {
+    font-size: 12.5px;
+  }
+}
