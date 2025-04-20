@@ -751,7 +751,7 @@ hr {
 
   /* Sección con imagen de fondo y parallax */
 .section3 {
-  background-image: url('../Img/fondo_graduacion.jpg');
+  background-image: url('../Img/Rosario.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -771,7 +771,7 @@ hr {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -897,7 +897,7 @@ hr {
 
   /* Sección con imagen de fondo y parallax */
   .section4 {
-    background-image: url('../Img/Evento3.jpeg');
+    background-image: url('../Img/Rosario.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1207,7 +1207,7 @@ hr {
 @media (max-width: 768px) {
     .section2 {
         background-attachment: fixed; /* Mantén el efecto parallax en móviles */
-        height: 90vh; /* La altura sigue siendo del 100% de la pantalla */
+        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
     }
     
     .section2 > * {
@@ -1281,7 +1281,7 @@ hr {
 @media (max-width: 768px) {
     .section12 {
         background-attachment: fixed; /* Mantén el efecto parallax en móviles */
-        height: 30vh; /* La altura sigue siendo del 100% de la pantalla */
+        height: 50vh; /* La altura sigue siendo del 100% de la pantalla */
     }
     
     .section12 > * {
@@ -1324,7 +1324,7 @@ hr {
 .book_propietario {
   position: relative;
   border-radius: 10px;
-  width: 220px;
+  width: 200px;
   height: 300px;
   background-image: url('../Img/MadreHija.jpg'); /* <- tu imagen */
   background-size: cover;
@@ -1383,7 +1383,7 @@ hr {
 .book_pasante {
   position: relative;
   border-radius: 10px;
-  width: 220px;
+  width: 200px;
   height: 300px;
   background-image: url('../Img/MadreHija.jpg'); /* <- tu imagen */
   background-size: cover;
