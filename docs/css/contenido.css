@@ -1468,12 +1468,13 @@ hr {
   }
 }
 
+
 /* 📱 Ajustes más pequeños (menos de 480px) */
 @media (max-width: 480px) {
   .book_propietario,
   .book_pasante {
-    width: 120px;
-    height: 190px;
+    width: 140px;
+    height: 210px;
   }
 
   .cover_propietario h3,
