@@ -463,7 +463,7 @@ html, body {
 
 /* Sección con imagen de fondo y parallax */
 .section1 {
-    background-image: url('../Img/Fondo2.jpeg');
+    background-image: url('../Img/Fondo2\ .webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1163,7 +1163,7 @@ hr {
 
  /* Sección con imagen de fondo y parallax */
  .section2 {
-  background-image: url('../Img/Fondo2.jpeg');
+  background-image: url('../Img/Fondo2\ .webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1237,7 +1237,7 @@ hr {
 
  /* Sección con imagen de fondo y parallax */
  .section12 {
-  background-image: url('../Img/Fondo2.jpeg');
+  background-image: url('../Img/Fondo2\ .webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
