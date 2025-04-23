@@ -844,7 +844,7 @@ hr {
 /* Ajuste para pantallas más pequeñas como teléfonos */
 @media (max-width: 480px) {
     .section3 {
-      height: 100vh; /* Ajusta la altura en pantallas muy pequeñas */
+      height: auto; /* Ajusta la altura en pantallas muy pequeñas */
     }
     
     .section3-content {
@@ -1047,6 +1047,47 @@ hr {
     }
   }
 
+  .countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.countdown-box {
+  background: linear-gradient(to bottom, #a50000c5, #ff0000be);
+  border-radius: 5px;
+  width: 80px;
+  height: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.countdown-box span {
+  font-size: 2.8rem;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.countdown-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: white;
+}
+
+.countdown-event {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 15px;
+}
+  
 
   .cardBlanco {
     position: relative;
