@@ -381,3 +381,14 @@ body {
     color: #181818;
   }
   
+
+  hr {
+    border: none; /* Elimina el borde predeterminado */
+    height: 5px; /* Define el grosor de la línea */
+    background-color: #fffffffa; /* Cambia el color de la línea */
+    width: 80%; /* Ajusta el ancho de la línea al 80% */
+    margin: 20px auto; /* Centra la línea y añade un margen superior e inferior */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+    border-radius: 5px; /* Redondea los bordes de la línea */
+    box-shadow: 0 4px 10px rgba(248, 247, 247, 0.7); /* Añade una sombra más prominente */
+}
