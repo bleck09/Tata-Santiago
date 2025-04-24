@@ -1,0 +1,383 @@
+/* ===================================
+   body
+=================================== */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #0f0d00; /* Color dorado */
+
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen para crear un efecto parallax */
+    text-align: center;
+    padding: 20px;
+    margin: 0; /* Elimina los márgenes por defecto */
+    
+    
+  }
+  /* Sección con fondo animado */
+  .section1 {
+     /* Imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    height: auto; /* Ocupa toda la pantalla en altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    animation: moveBackground 5s ease-in-out infinite alternate; /* Animación de movimiento */
+    background-image: url('../Img/FondoPrincipal.jpeg');
+    border-radius: 20px;
+  }
+  
+  /* Capa oscura encima de la imagen */
+  .section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Oscurece el fondo ligeramente */
+    z-index: 1;
+  }
+  
+  /* Asegura que el contenido esté por encima de la capa oscura */
+  .section1 > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Efecto de transición suave para el contenido */
+  .section1-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+  }
+  
+  .section1.scrolled .section1-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+  }
+  
+  /* --- Animación de fondo en movimiento --- */
+  @keyframes moveBackground {
+    0% {
+      background-position: left bottom;
+    }
+    50% {
+      background-position: center center;
+    }
+    100% {
+      background-position: right top;
+    }
+  }
+  
+ /* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+  .section1 {
+    background-size: 100% 100%;
+  }
+
+  .section1 > * {
+    padding: 10px;
+  }
+
+  .section1-content {
+    padding: 20px 10px;
+    animation: slideDown 1s ease-out forwards;
+  }
+}
+
+
+  
+  /* Ajuste para pantallas más pequeñas como teléfonos */
+  @media (max-width: 480px) {
+    .section1 {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .section1-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }
+  }
+    /* Media Queries para pantallas pequeñas */
+    @media only screen and (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+    
+        h1 {
+            font-size: 5em;  /* Tamaño de texto reducido para móviles */
+        }
+    
+        nav ul li {
+            display: block;  /* Coloca los enlaces en bloques verticales */
+            margin: 10px 0;
+        }
+    
+        a {
+            font-size: 2.2em;  /* Aumenta el tamaño del texto de los enlaces en móviles */
+        }
+    }
+    
+
+/* From Uiverse.io by yashasvi9199 */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    background-color: #4a0f0e;
+    border-radius: 58px;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .card {
+    background-image: linear-gradient(163deg, #d6b85f 0%, #ff0000 100%);
+    border-radius: 22px;
+    transition: all 0.3s;
+  }
+  
+  .card2 {
+    border-radius: 0;
+    transition: all 0.2s;
+  }
+  
+  .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
+  }
+  
+  #heading {
+    text-align: center;
+    margin: 2em;
+    color:#d6b85f;
+    font-size: 1.2em;
+  }
+  
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: rgb(211, 13, 13);
+    background-color: #f1f0f0;
+    box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+  }
+  
+  .input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: rgb(0, 0, 0);
+  }
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #000000;
+  }
+  
+  .form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+  }
+ 
+
+
+
+  
+/* From Uiverse.io by MuhammadHasann */ 
+.BotonIndex {
+    position: relative;
+    padding: 15px 45px ;
+    margin: 4px;
+    background: #fec195;
+    font-size: 17px;
+    font-weight: 500;
+    color: #f7efef;
+    cursor: pointer;
+    border: 4px solid #fec195;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(245, 145, 145, 0.986));
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out; /* para suavizar cambios */
+  }
+  
+  /* Animación de aparición SOLO UNA VEZ */
+  .animar-boton {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: mostrarBoton 0.8s ease-out 0s forwards;
+  }
+  
+  @keyframes wind {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    0% {
+      background-position: 50% 100%;
+    }
+  
+    0% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(250, 7, 7, 0.3));
+  }
+  
+  .icon-1 {
+    animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+  }
+  
+  @keyframes slay-1 {
+    0% {
+      transform: rotate(10deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  .icon-2 {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 12px;
+    transform-origin: 50% 0;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0));
+  }
+  
+  .icon-2 {
+    animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  }
+  
+  @keyframes slay-2 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  .icon-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    transform-origin: 50% 0;
+    transform: rotate(-5deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  }
+  
+  .icon-3 {
+    animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  }
+  
+  @keyframes slay-3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  /* Icono 1 - rojo vino */
+  .icon-1 path {
+    fill: #c1121f; /* rojo vino */
+  }
+  
+  /* Icono 2 - rojo clásico */
+  .icon-2 path {
+    fill: #ff0000; /* rojo clásico */
+  }
+  
+  /* Icono 3 - rojo coral */
+  .icon-3 path {
+    fill: #e63946; /* rojo coral */
+  }
+  
+  @keyframes mostrarBoton {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .heartbeat {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: aparecerImagen 0.8s ease-out 1s forwards;
+  }
+  
+  @keyframes aparecerImagen {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .icon-1,
+  .icon-2,
+  .icon-3 {
+    animation: slay-1 3s infinite;
+  }
+  .BotonIndex:hover {
+    border: 1px solid #f5efef;
+    background: linear-gradient(
+      85deg,
+      #fec195,
+      #fcc196,
+      #fabd92,
+      #fac097,
+      #fac39c
+    );
+    background-size: 300% 300%;
+    color: #181818;
+  }
+  
