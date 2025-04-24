@@ -3,7 +3,7 @@
 =================================== */
 body {
     font-family: 'Raleway', sans-serif;
-    background: #0f0d00; /* Color dorado */
+    background: rgb(100, 6, 6); 
 
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
@@ -12,116 +12,8 @@ body {
     text-align: center;
     padding: 20px;
     margin: 0; /* Elimina los márgenes por defecto */
-    
-    
   }
-  /* Sección con fondo animado */
-  .section1 {
-     /* Imagen de fondo */
-    background-size: cover; /* Cubre toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repetir la imagen */
-    height: auto; /* Ocupa toda la pantalla en altura */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    animation: moveBackground 5s ease-in-out infinite alternate; /* Animación de movimiento */
-    background-image: url('../Img/FondoPrincipal.jpeg');
-    border-radius: 20px;
-  }
-  
-  /* Capa oscura encima de la imagen */
-  .section1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1); /* Oscurece el fondo ligeramente */
-    z-index: 1;
-  }
-  
-  /* Asegura que el contenido esté por encima de la capa oscura */
-  .section1 > * {
-    position: relative;
-    z-index: 2;
-  }
-  
-  /* Efecto de transición suave para el contenido */
-  .section1-content {
-    transition: transform 1s ease; /* Transición suave al hacer scroll */
-  }
-  
-  .section1.scrolled .section1-content {
-    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
-  }
-  
-  /* --- Animación de fondo en movimiento --- */
-  @keyframes moveBackground {
-    0% {
-      background-position: left bottom;
-    }
-    50% {
-      background-position: center center;
-    }
-    100% {
-      background-position: right top;
-    }
-  }
-  
- /* --- Ajustes para dispositivos móviles --- */
-@media (max-width: 768px) {
-  .section1 {
-    background-size: 100% 100%;
-  }
-
-  .section1 > * {
-    padding: 10px;
-  }
-
-  .section1-content {
-    padding: 20px 10px;
-    animation: slideDown 1s ease-out forwards;
-  }
-}
-
-
-  
-  /* Ajuste para pantallas más pequeñas como teléfonos */
-  @media (max-width: 480px) {
-    .section1 {
-        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
-    }
-    
-    .section1-content {
-        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
-    }
-  }
-    /* Media Queries para pantallas pequeñas */
-    @media only screen and (max-width: 600px) {
-        body {
-            padding: 10px;
-        }
-    
-        h1 {
-            font-size: 5em;  /* Tamaño de texto reducido para móviles */
-        }
-    
-        nav ul li {
-            display: block;  /* Coloca los enlaces en bloques verticales */
-            margin: 10px 0;
-        }
-    
-        a {
-            font-size: 2.2em;  /* Aumenta el tamaño del texto de los enlaces en móviles */
-        }
-    }
-    
+ 
 
 /* From Uiverse.io by yashasvi9199 */ 
 .form {
