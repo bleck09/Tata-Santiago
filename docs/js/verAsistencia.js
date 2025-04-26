@@ -4,11 +4,11 @@ function verificarInvitada(event) {
     const frase = document.querySelectorAll('.input-field')[0];
     const codigo = document.querySelectorAll('.input-field')[1];
   
-    const fraseValida = frase.value.trim().toLowerCase() === "vane";
-    const codigoValido = codigo.value.trim() === "vane";
+    const fraseValida = frase.value.trim().toLowerCase() === "vla";
+    const codigoValido = codigo.value.trim() === "vla";
   
     if (fraseValida && codigoValido) {
-      window.open("https://maps.app.goo.gl/ZKmrpK1D7zo7XAKw9", "_blank");
+      window.open("https://docs.google.com/spreadsheets/d/1dlGrEAL4SQMpZA0lTpa9riH3VlFDc04yGzW_J8Pb80w/edit?usp=sharing", "_blank");
     } else {
       if (!fraseValida) {
         frase.value = "";

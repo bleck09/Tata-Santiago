@@ -896,7 +896,114 @@ hr {
   }
 
   /* Sección con imagen de fondo y parallax */
-  .section4 {
+  .Misa {
+    background-image: url('../Img/MisaFondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Capa oscura encima de la imagen */
+  .Misa::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+  }
+  
+  /* Asegura que el contenido esté por encima de la capa oscura */
+  .Misa > * {
+      position: relative;
+      z-index: 2;
+      transition: transform 1s ease;
+     
+  }
+  /* Título del contador */
+  .countdown-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    
+    /* Números de cuenta regresiva */
+    .countdown-numbers {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+    
+    /* Etiquetas */
+    .countdown-label {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    
+    /* Texto final */
+    .countdown-event {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      color: #fff;
+      margin-top: 20px;
+    }
+  /* Efecto de transición suave para el contenido */
+  .Misa-content {
+      transition: transform 1s ease; /* Transición suave al hacer scroll */
+  }
+  
+  .Misa.scrolled .Misa-content {
+      transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+  }
+  
+  /* --- Ajustes para dispositivos móviles --- */
+  @media (max-width: 768px) {
+      .Misa {
+          background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+          height: auto; /* La altura sigue siendo del 100% de la pantalla */
+      }
+      
+      .Misa > * {
+          padding: 10px; /* Reduce los paddings en móviles */
+      }
+  
+     
+      
+      .Misa-content {
+          padding: 20px 10px;
+          transform: translateY(-20px); /* Ajuste menor para la transición */
+      }
+  }
+  
+  /* Ajuste para pantallas más pequeñas como teléfonos */
+  @media (max-width: 480px) {
+      .Misa {
+          height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+      }
+      
+      .Misa-content {
+          transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+      }
+  
+      
+  }
+
+
+
+   /* Sección con imagen de fondo y parallax */
+   .section4 {
     background-image: url('../Img/Rosario.jpg');
     background-size: cover;
     background-position: center;
@@ -972,7 +1079,7 @@ hr {
   @media (max-width: 768px) {
       .section4 {
           background-attachment: fixed; /* Mantén el efecto parallax en móviles */
-          height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+          height: auto; /* La altura sigue siendo del 100% de la pantalla */
       }
       
       .section4 > * {
