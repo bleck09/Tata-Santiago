@@ -173,12 +173,19 @@
                 <b>Santa Misa</b>
               </p>
               <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
-                <br> a Hrs. 16:30 en la parroquia La Rotonda
+                <br> a Hrs. 16:00 en la parroquia La Rotonda
               </p>
-            <div class="cardAnahi">
-                <img src="../Img/Misa.jpg" alt="Lugar del evento" class="img-fluid uni-img"
-                    style="max-width: 600px; width: 100%; height: auto;">
+              
+              <div class="misa-carrusel">
+                <div class="misa-slides">
+                  <img src="../Img/Misa.jpg" alt="Santa Misa">
+                  <img src="../Img/LaRotonda.webp" alt="Parroquia La Rotonda">
+                </div>
+                <button class="misa-prev" onclick="misaSlide(-1)">❮</button>
+                <button class="misa-next" onclick="misaSlide(1)">❯</button>
+              
             </div>
+            
             <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
                 <b>Ubicacion de la Misa</b>
               </p>
@@ -536,6 +543,8 @@ Protégenos de los peligros y guíanos en el camino de la santidad. Amén.
     <hr>
 
     <script src="../js/cuentaRegresiva.js"></script>
+    
+
 </body>
 
 </html>

@@ -86,3 +86,25 @@ setupBook(".book_propietario", ".cover_propietario");
 
 // 📕 Pasante
 setupBook(".book_pasante", ".cover_pasante");
+
+
+
+let misaIndex = 0;
+  const misaSlides = document.querySelectorAll('.misa-slides img');
+
+  function showMisaSlide(n) {
+    misaSlides.forEach((img, i) => {
+      img.style.display = (i === n) ? 'block' : 'none';
+    });
+  }
+
+  function misaSlide(n) {
+    misaIndex += n;
+    if (misaIndex < 0) misaIndex = misaSlides.length - 1;
+    if (misaIndex >= misaSlides.length) misaIndex = 0;
+    showMisaSlide(misaIndex);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showMisaSlide(misaIndex);
+  });
