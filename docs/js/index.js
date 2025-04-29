@@ -10,21 +10,21 @@ const invitados = {
     nombre: "María",
     mensaje: "¡María, será un honor verte compartir esta alegría con nosotros!"
   },
-  pedro: {
-    nombre: "Pedro",
-    mensaje: "¡Pedro, tu presencia hará este día aún más especial!"
+  familia: {
+    nombre: "Familia",
+    mensaje: "Querida familia González, nos sentimos felices de contar con su compañía en esta celebración tan especial."
   },
-  juan: {
-    nombre: "Juan",
-    mensaje: "¡Juan, Tata Santiago te espera con los brazos abiertos!"
+  jose: {
+    nombre: "Jose",
+    mensaje: "José Luis y Ana, su presencia embellecerá esta fecha de fe y alegría."
   },
-  ana: {
-    nombre: "Ana",
-    mensaje: "¡Ana, acompáñanos en este día lleno de fe y celebración!"
+  padrinos: {
+    nombre: "Padrinos",
+    mensaje: "Queridos padrinos López, su ejemplo y apoyo son parte esencial de esta celebración."
   },
-  carlos: {
-    nombre: "Carlos",
-    mensaje: "¡Carlos, tu presencia iluminará esta gran fiesta!"
+  juanita: {
+    nombre: "Juanita",
+    mensaje: "Queridos amigos, Juanita y Carlos, será un honor compartir este día junto a ustedes."
   }
   // Puedes seguir agregando más invitados aquí
 };
