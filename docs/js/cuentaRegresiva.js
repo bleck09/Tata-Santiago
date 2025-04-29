@@ -108,3 +108,20 @@ let misaIndex = 0;
   document.addEventListener("DOMContentLoaded", () => {
     showMisaSlide(misaIndex);
   });
+
+
+
+  document.querySelectorAll('.thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const mainImage = document.getElementById('mainImage');
+      const mainText = document.getElementById('mainText');
+      
+      mainImage.src = thumb.src;
+      mainText.textContent = thumb.dataset.text;
+  
+      // Reiniciar animación
+      mainText.classList.remove('main-text');
+      void mainText.offsetWidth; // Fuerza el reflow
+      mainText.classList.add('main-text');
+    });
+  });

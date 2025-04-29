@@ -1819,3 +1819,79 @@ hr {
 .misa-next {
   right: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-slider {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 2, 2, 1);
+}
+
+.main-image img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.main-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  border-radius: 10px;
+  animation: fadeIn 1s;
+}
+
+.thumbnails {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnails img {
+  width: 50px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.3s;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
