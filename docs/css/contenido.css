@@ -76,6 +76,114 @@ a:hover {
     color: #e74c3c;
 }
 
+
+ /* Sección con imagen de fondo y parallax */
+ .Pasante {
+  background-image: url('../Img/TataSantiago1.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Capa oscura encima de la imagen */
+.Pasante::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+.Pasante > * {
+    position: relative;
+    z-index: 2;
+    transition: transform 1s ease;
+   
+}
+/* Título del contador */
+.countdown-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Números de cuenta regresiva */
+  .countdown-numbers {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Etiquetas */
+  .countdown-label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Texto final */
+  .countdown-event {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 20px;
+  }
+/* Efecto de transición suave para el contenido */
+.Pasante-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+}
+
+.Pasante.scrolled .Pasante-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+}
+
+/* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .Pasante {
+        background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+        height: auto; /* La altura sigue siendo del 100% de la pantalla */
+    }
+    
+    .Pasante > * {
+        padding: 10px; /* Reduce los paddings en móviles */
+    }
+
+   
+    
+    .Pasante-content {
+        padding: 20px 10px;
+        transform: translateY(-20px); /* Ajuste menor para la transición */
+    }
+}
+
+/* Ajuste para pantallas más pequeñas como teléfonos */
+@media (max-width: 480px) {
+    .Pasante {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .Pasante-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }
+
+    
+}
+
+
+
 footer {
     display: flex;
     justify-content: center;
@@ -1832,8 +1940,6 @@ hr {
 
 
 
-
-
 .custom-slider {
   max-width: 300px;
   margin: auto;
@@ -1845,7 +1951,7 @@ hr {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 2, 2, 1);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 .main-image img {
@@ -1859,13 +1965,32 @@ hr {
   position: absolute;
   bottom: 15px;
   left: 15px;
+  right: 15px; /* Añade esto para que tenga separación también del lado derecho */
   font-size: 2rem;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Georgia', serif; font-style: italic;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 25px; /* ← Aquí das más espacio arriba/abajo y a los lados */
   border-radius: 10px;
   animation: fadeIn 1s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo-slider {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+  
+}
+
+.nombres-slider {
+  font-size: 1rem;
+  color: #eeff00;
 }
 
 .thumbnails {
@@ -1877,8 +2002,9 @@ hr {
 
 .thumbnails img {
   width: 50px;
-  height: 80px;
+  height: 70px;
   object-fit: cover;
+  margin: 20px;
   border-radius: 10px;
   cursor: pointer;
   opacity: 0.7;
@@ -1892,7 +2018,17 @@ hr {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
+.thumb.active {
+  transform: scale(1.2);
+  opacity: 1 !important;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border: 2px solid rgb(255, 0, 0);
+  z-index: 2;
+}

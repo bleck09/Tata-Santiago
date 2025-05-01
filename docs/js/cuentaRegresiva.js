@@ -109,19 +109,30 @@ let misaIndex = 0;
     showMisaSlide(misaIndex);
   });
 
-
-
   document.querySelectorAll('.thumb').forEach(thumb => {
     thumb.addEventListener('click', () => {
       const mainImage = document.getElementById('mainImage');
       const mainText = document.getElementById('mainText');
-      
+  
+      const titulo = thumb.dataset.titulo;
+      const nombres = thumb.dataset.nombres.split('|');
+  
+      const html = `
+        <span class="titulo-slider">${titulo}</span>
+        <span class="nombres-slider">${nombres.join('<br>')}</span>
+      `;
+  
       mainImage.src = thumb.src;
-      mainText.textContent = thumb.dataset.text;
+      mainText.innerHTML = html;
   
       // Reiniciar animación
       mainText.classList.remove('main-text');
-      void mainText.offsetWidth; // Fuerza el reflow
+      void mainText.offsetWidth;
       mainText.classList.add('main-text');
+  
+      // Manejar clases activas en thumbnails
+      document.querySelectorAll('.thumb').forEach(img => img.classList.remove('active'));
+      thumb.classList.add('active');
     });
   });
+  
